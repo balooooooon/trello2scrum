@@ -1,1 +1,35 @@
+One input on page for sending JSON which after submit returns pdf for download with convinient filename
 
+Boards -> Cards
+
+Card:
+Name,
+Description,
+
+Color (label),
+Member
+
+Parse name (User story/task)
+Assign tasks to user stories
+group cards by title mark on begining
+float cards, align left
+
+
+
+Boards:
+
+-----------------------------------------------------------------------
+|     To-Do      |   In progress   |                Done              |
+|----------------|-----------------|----------------------------------|
+| Task - card    | Stroy - card2   | Story2 - card3  ; Task2 - card4  | 
+| Task3 - card5  | Task4 - card6   | Task5 - card7 ; Task6 - card8    |
+|________________| Task7 - card9   | Task8 - card10 ; Story3 - card11 |
+                 |_________________| Task9 - card12 ; Task10 - card13 |
+                                   | Task11 - card14                  |
+                                   |__________________________________|
+
+Min width, variable widths based on content. A4 page format, many pages in worst case
+Cards colored whole background, based on labels[0].color
+
+
+Technology stack: JSON -> php -> html -> mpdf -> PDF
