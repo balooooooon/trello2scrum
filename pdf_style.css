@@ -1,0 +1,58 @@
+body {
+        font-family: sans-serif;
+        font-size: 13px;
+}
+.board {
+        display: table-row;
+}
+.list {
+        display: table-cell;
+        min-width: 200px;
+        border: 1px solid black;
+        overflow: hidden;
+        margin-right: 15px;
+}
+.list__column {
+        width: 222px;
+        float: left;
+}
+.list--variable_width {
+        
+}
+.list__name {
+        text-align: center;
+        font-size: 18px;
+        line-height: 35px;
+}
+.card {
+        width: 200px;
+        border: 1px solid gray;
+        margin: 5px;
+        padding: 5px;
+        overflow: hidden;
+        clear: both;
+}
+//.list--variable_width .card {
+//        float: left;
+//        clear: none;
+//}
+.card__name {
+        clear: both;
+        padding-top: 2px;
+        font-size: 15px;
+        border-top: 1px solid #cecece;
+}
+.card__desc {
+        color: #555;
+}
+.card__users {
+        float: right;
+}
+.label {
+        width: 30px;
+        height: 15px;
+        float: left;
+        color: #fff;
+        font-size: 10px;
+        padding: 0 5px;
+}
