@@ -43,6 +43,7 @@
 }
 .card__label {
         width: 15mm;
+	height: 4.5mm;
         margin: 1mm;
         float: left;
         color: #fff;
