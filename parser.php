@@ -4,7 +4,17 @@ if(empty($_POST) && empty($_FILES)){
 }
 
 include './mpdf60/mpdf.php';
+$label_colors = [
+    'sky' => '#3BCDE4'
+];
 
+function replace_labels_colors($card){
+        global $label_colors;
+        foreach($card->labels as $l){
+                $l->color = str_replace(array_keys($label_colors), array_values($label_colors), $l->color);
+        }
+        return $card;
+}
 function array_to_assoc($arr){
         $ret = [];
         foreach($arr as $i){
@@ -19,6 +29,7 @@ function add_cards_to_lists($cards, $lists){
                         $lists[$list]->cards = [];
                 }
                 $lists[$list]->cards[$c->id] = $c;
+                replace_labels_colors($c);
         }
 }
 function find_longes_list($lists){
@@ -51,6 +62,7 @@ function add_users_to_cards($cards, $members){
 
 function parse_file($input){
         $file_content = file_get_contents($_FILES[$input]['tmp_name']);
+        //$file_content = file_get_contents('files/'.$input.'.json');
         $object = json_decode($file_content);
         $lists = array_to_assoc($object->lists);
         $cards = array_to_assoc($object->cards);
@@ -61,10 +73,11 @@ function parse_file($input){
         include($input.'.php');
 }
 
-$mpdf=new mPDF('utf-8', 'A3-L'); 
+$mpdf=new mPDF('utf-8', 'A2-L'); 
 ob_start();
 ob_clean();
 include './view.php';
+//echo ob_get_clean();
 $mpdf->WriteHTML(ob_get_clean());
 $mpdf->Output();
 

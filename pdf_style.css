@@ -1,58 +1,67 @@
-body {
-        font-family: sans-serif;
-        font-size: 13px;
-}
 .board {
-        display: table-row;
 }
 .list {
-        display: table-cell;
-        min-width: 200px;
-        border: 1px solid black;
-        overflow: hidden;
-        margin-right: 15px;
-}
-.list__column {
-        width: 222px;
+        width: 80mm;
         float: left;
+        padding-right: 2mm;
 }
 .list--variable_width {
-        
+        width: 400mm;
+        padding: 0;
+}
+.list__border {
+        border: 1px solid black;
+        padding: 2mm;
+        height: 350mm;
+        overflow: hidden;
+}
+.list--product {
+        width: 78.5mm;
+}
+.list--product .list__border {
+        height: 170mm;
+        margin-bottom: 2mm;
 }
 .list__name {
+        font-weight: bold;
+        font-size: 6mm;
         text-align: center;
-        font-size: 18px;
-        line-height: 35px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 2mm;
+}
+.list--variable_width .card {
+        margin-left: 2mm;
+        margin-right: 2mm;
 }
 .card {
-        width: 200px;
-        border: 1px solid gray;
-        margin: 5px;
-        padding: 5px;
-        overflow: hidden;
-        clear: both;
+        width: 74.8mm;
+        height: 30mm;
+        float: left;
+        margin-bottom: 2mm;
+        background: antiquewhite;
+        border: 0.2mm solid #E5CFB0;
 }
-//.list--variable_width .card {
-//        float: left;
-//        clear: none;
-//}
-.card__name {
-        clear: both;
-        padding-top: 2px;
-        font-size: 15px;
-        border-top: 1px solid #cecece;
-}
-.card__desc {
-        color: #555;
-}
-.card__users {
-        float: right;
-}
-.label {
-        width: 30px;
-        height: 15px;
+.card__label {
+        width: 15mm;
+        margin: 1mm;
         float: left;
         color: #fff;
-        font-size: 10px;
-        padding: 0 5px;
+        background: #404040;
+        font-size: 3mm;
+        text-align: center;
+}
+.card__users {
+        width: 56mm;
+        margin: 1mm;
+        float: right;
+        text-align: right;
+}
+.card__name {
+        padding: 0 1mm 1mm;
+        clear: both;
+}
+.card__desc {
+        padding: 1mm;
+        clear: both;
+        color: #8E8373;
 }
