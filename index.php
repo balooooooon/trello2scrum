@@ -1,4 +1,4 @@
-<?php include 'parser.php'; ?><!DOCTYPE html>
+<?php error_reporting(E_ALL); include 'parser.php'; ?><!DOCTYPE html>
 <html>
         <head>
                 <meta charset="UTF-8">
